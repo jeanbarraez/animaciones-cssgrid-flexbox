@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+aside img {
+  width: 5rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+aside {
+  grid-area: aside;
+  background-color: rgb(13, 13, 20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+menu {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+menu a {
+  text-decoration: none;
+  color: white;
+  margin: 0.5rem;
+}
+
+
+
+menu p {
+  padding: 0.5rem;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* movil*/
+
+main {
+  grid-area: main;
+  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  grid-template-columns: repeat(25% 75%);
+  grid-template-rows: auto 25%;
+  margin: 0;
+}
+
+section h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.desktop {
+  display: none;
+  
+}
+
+
+
+.texto p {
+  display: none;
+}
+
+h1 {
+  display: none;
+}
+
+.movil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ aside img {
+    animation: logo 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;;
+  }
+ @keyframes logo {
+  0% {
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    transform: translateZ(180px) rotateY(200deg);
+  }
+}
+
+.movil img {
+  width: 100%;
+  height: 29rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes-sociales {
+  margin-right: 1rem;
+  animation: 3s ease-in infinite;
+}
+.redes-sociales:hover {
+  animation: sociales 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@keyframes sociales {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+.redes-sociales a {
+  color: white;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    "aside"
+    "main"
+    "footer";
+  height: 100vh;
+  grid-template-rows: 15% 70% 15%;
+  grid-template-columns: 100%;
+  background-color: #000000;
+  width: fit-content;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  flex-direction: column;
+}
+
+p {
+  margin: 1rem;
+}
+
+h2 {
+  text-align: center;
+  display: none;
+  padding: 0.5rem;
+}
+
+.historia {
+  display: none;
+}
+
+p {
+  display: none;
+}
+
+button {
+  display: none;
+}
+
+/*medium*/
+@media (width >= 768px) {
+  body {
+    display: grid;
+    grid-template-areas: "aside main" "footer footer ";
+    height: 100vh;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto 15%;
+    background-color: white;
+  }
+
+  footer {
+    background-color: rgb(50, 50, 51);
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+
+  
+
+  aside img {
+    animation: logo 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;;
+  }
+ @keyframes logo {
+  0% {
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    transform: translateZ(200px) rotateY(220deg);
+  }
+}
+
+
+  .venezolanos {
+    animation: peloteros 2s linear both;
+  }
+
+  @keyframes peloteros {
+    0% {
+      transform: rotate3d(1, 1, 0, 0deg);
+      transform-origin: 0% 100%;
+    }
+    50% {
+      transform: rotate3d(1, 1, 0, 180deg);
+      transform-origin: 0% 100%;
+    }
+    100% {
+      transform: rotate3d(1, 1, 0, 360deg);
+      transform-origin: 0% 100%;
+    }
+  }
+
+  menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  menu a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .desktop,
+  .movil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 28rem;
+  }
+
+  main {
+    grid-area: "main";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .desktop img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: 1s ease;
+  }
+
+  .desktop img:hover {
+    filter: grayscale(0%);
+    transition: 1s ease;
+  }
+
+  .movil:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease;
+  }
+
+  .movil img {
+    filter: grayscale(100%);
+    transition: 1s ease;
+  }
+
+  .movil img:hover {
+    filter: grayscale(0%);
+    transition: 1s ease;
+  }
+
+  .desktop:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease;
+  }
+
+  h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .texto p {
+    display: flex;
+  }
+
+  .historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parrafo {
+    border: 1px solid rgb(155, 145, 145);
+    margin: 1rem;
+    border-radius: 10px;
+  }
+
+  .historia p {
+    padding: 1rem;
+  }
+  .historia img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .venezolanos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid blue;
+    border-radius: 2%;
+    margin: 2rem;
+    padding: 1rem;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .container-estadisticas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  article button {
+    padding: 1rem;
+    width: 8rem;
+    border: none;
+    background-color: #0862e9;
+    width: 50%;
+    margin: 1rem;
+  }
+
+  p {
+    display: block;
+  }
+  h2 {
+    display: block;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+  }
+
+  button:hover {
+    color: white;
+    animation: estadistica 4s infinite;
+  }
+
+  @keyframes estadistica {
+    0% {
+      background-color: #0862e9;
+    }
+    50% {
+      background-color: rgb(206, 85, 55);
+    }
+
+    100% {
+      background-color: rgb(185, 194, 104);
+    }
+  }
+
+  button a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/*large*/
+
+@media (width >= 992px) {
+  main {
+    grid-area: "main";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .desktop,
+  .movil {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .venezolanos {
+    width: 23rem;
+    height: 23rem;
+  }
+}
